@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8">
+  <title>Set folder here</title>
+ </head>
+ <body>
+     <p>Upload your FC directory</p>
+     <div id="choose_folder">
+        <form id="fetch">
+            <input type="checkbox" id="working_batches"><label for="working_batches">Include working batches</label><br>
+            <input type="checkbox" id="training_batches"><label for="training_batches">Include training batches</label><br>
+            <input type="checkbox" id="export_files"><label for="export_files">Include export files</label><br>
+            <input type="checkbox" id="def_backups"><label for="def_backups">Include definition backups</label><br><br>
+            <input type="file" id="upload_directory" webkitdirectory directory multiple /><br><br>
+            <input type="button" id="submit" value="Fetch"><br><br>
+        </form>
+     </div>
+     <div id="fetch_confirm"></div>
+     <div id="result"></div>
+ </body>
+ <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+ <script src="/static/folder_struct.js"></script>
+</html>
