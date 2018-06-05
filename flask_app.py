@@ -23,11 +23,11 @@ def fetch():
     for key, file in files.items():
         filename = os.path.join(UPLOAD_DIR, file.name)
         if not os.path.exists(os.path.dirname(filename)):
-            try:
-                os.makedirs(os.path.dirname(filename))
-            except OSError as exc: # Guard against race condition
-                if exc.errno != errno.EEXIST:
-                    raise
+            #try:
+            os.makedirs(os.path.dirname(filename))
+            #except OSError as exc: # Guard against race condition
+                #if exc.errno != errno.EEXIST:
+                    #raise
         file.save(filename)
     #return render_template("fetch_confirm.html")
     return "Upload was successful!"
